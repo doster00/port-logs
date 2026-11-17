@@ -1,0 +1,39 @@
+name: port_logs
+description: Lista consoles portáteis Linux (ArkOS e similares) na rede, acessa via SSH e permite ler e compartilhar os logs dos ports.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dartssh2: ^2.11.0
+  share_plus: ^10.1.4
+  path_provider: ^2.1.5
+  shared_preferences: ^2.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+# Gerar ícones: dart run flutter_launcher_icons
+flutter_launcher_icons:
+  image_path: assets/icon/icon.png
+  android: true
+  adaptive_icon_background: "#5B35C4"
+  adaptive_icon_foreground: assets/icon/icon_foreground.png
+  ios: true
+  remove_alpha_ios: true
+  background_color_ios: "#5B35C4"
+  windows:
+    generate: true
+    icon_size: 256
+  macos:
+    generate: true
